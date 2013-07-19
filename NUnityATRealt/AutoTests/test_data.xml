@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<test_data>
+	<data_item location="Минск" flats_count="1000"/>
+	<data_item location="Брест" flats_count="200"/>
+	<data_item location="Гомель" flats_count="100"/>
+</test_data>

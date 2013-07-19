@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<classes>
+	<class name="HomePage">
+		<field field_name="FlatLink" locator="Квартиры, комнаты"/>
+	</class>
+	
+	<class name="FlatsResultPage">
+		<field field_name="FlatsInfo" locator=".//*[@id='uedb-page-browser'][last()]/p"/>
+		<field field_name="ChooseFlatsLink" locator=".//*[@class='search']/a"/>
+	</class>
+	
+	<class name="FlatPage">
+		<field field_name="LocationInput" locator=".//*[@id='selection']//td[contains(.,'Населенный пункт:')]//select"/>
+		<field field_name="RegionComboBox" locator="tx_uedbflat_pi2[DATA][town_subdistrict_id][e][]"/>
+		<field field_name="SearchButton" locator="//input[@type='submit']"/>
+		<field field_name="FirstFloorCheckBox" locator="storey_ne"/>
+		<field field_name="LastFloorCheckBox" locator="storey_fne"/>
+		<field field_name="FromCostValueInput" locator="tx_uedbflat_pi2[DATA][price][ge]"/>
+		<field field_name="ToCostValueInput" locator="tx_uedbflat_pi2[DATA][price][le]"/>
+	</class>
+
+	<class name="FilterFlatsPage">
+		<field field_name="ChooseFlatsLink" locator=".//*[@class='search']/a"/>
+	</class>
+</classes>

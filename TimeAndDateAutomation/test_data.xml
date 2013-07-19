@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tests>
+	<test_data name="MenuTest">
+		<data_item chain_menu="" nav_str="1000"/>
+		<data_item chain_menu="Брест" nav_str="200"/>
+		<data_item chain_menu="Гомель" nav_str="100"/>
+	</test_data>
+</tests>
