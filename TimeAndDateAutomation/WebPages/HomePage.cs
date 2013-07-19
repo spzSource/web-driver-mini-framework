@@ -3,29 +3,24 @@ using ATFramework.WebElements;
 using ATFramework.WebElements.Utils;
 using NUnit.Framework;
 using System.Linq;
-using System.Configuration;
 using ATFramework.Framework.Common;
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using TimeAndDateAutomation.WebPages.Blocks;
 using System;
+using TimeAndDateAutomation.Annotations;
 
 namespace TimeAndDateAutomation.WebPages
 {
 	public class HomePage : BasePage
 	{
-		[Bind(How = How.CssSelector, Name = "AppsAndApiLink")] 
+		[Bind(How = How.CssSelector, Name = "AppsAndApiLink"), UsedImplicitly] 
 		private Link linkAppsAndApi;
-
-		Actions action;
 
 		public HomePage()
 		{
 			PageFactory.InitElements(this);
 			Assert.True(linkAppsAndApi.isPresent());
-
-			action = new Actions(Driver);
 		}
 
 		public bool CheckPage(string chainMenu, string navigationLabel)
@@ -43,7 +38,8 @@ namespace TimeAndDateAutomation.WebPages
 			Link link = new Link(By.XPath(itemLocator));
 		
 			link.WaitPresent(TimeSpan.FromSeconds(10));
-
+			
+			Actions action = new Actions(Driver);
 			action.MoveToElement(link.WebElement).Perform();
 
 			string targetLinkLocator = string.Format(".//*[@id='ho']/li/a[contains(.,'{0}')]", menuItems.Last());

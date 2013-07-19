@@ -1,7 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using RealtAutomation.Annotations;
 using RealtAutomation.Framework;
 using RealtAutomation.WebElements;
-using RealtAutomation.Framework.Exceptions;
 using NUnit.Framework;
 using RealtAutomation.WebElements.Utils;
 using NUnitATRealt.WebElements.Utils;
@@ -11,7 +10,7 @@ namespace RealtAutomation.WebPages
 	class FilterFlatsPage : BasePage
 	{
 		[Find(How = How.XPath)]
-		[Name(ElementName = "ChooseFlatsLink")]
+		[Name(ElementName = "ChooseFlatsLink"), UsedImplicitly]
 		private Link chooseFlatsLink;
  
 		public FilterFlatsPage()

@@ -9,47 +9,47 @@ namespace TimeAndDateAutomation.WebPages.Blocks
 		Newsletter,
 
 		[NameAttribute("About Us")]
-		About_Us,
+		AboutUs,
 
 		[NameAttribute("Site Map")]
-		Site_Map
+		SiteMap
 	}
 
 	[NameAttribute("World Clock")]
-	public enum World_Clock
+	public enum WorldClock
 	{
 		[NameAttribute("Main World Clock")]
-		Main_World_Clock,
+		MainWorldClock,
 
 		[NameAttribute("Extended World Clock")]
-		Extended_World_Clock,
+		ExtendedWorldClock,
 
 		[NameAttribute("Personal World Clock")]
-		Personal_World_Clock,
+		PersonalWorldClock,
 
 		[NameAttribute("Event Time Announcer")]
-		Event_Time_Announcer
+		EventTimeAnnouncer
 	}
 
 	[NameAttribute("Time Zones")]
-	public enum Time_Zones
+	public enum TimeZones
 	{
 		[NameAttribute("Time Zone Converter")]
-		Time_Zone_Converter,
+		TimeZoneConverter,
 
 		[NameAttribute("Meeting Planner")]
-		Meeting_Planner,
+		MeetingPlanner,
 
 		[NameAttribute("Time Zone Map")]
-		Time_Zone_Map,
+		TimeZoneMap,
 
 		[NameAttribute("Time Zone Abbreviations")]
-		Time_Zone_Abbreviations,
+		TimeZoneAbbreviations,
 
 		[NameAttribute("Time Zone News")]
-		Time_Zone_News,
+		TimeZoneNews,
 
 		[NameAttribute("Daylight Saving Time")]
-		Daylight_Saving_Time
+		DaylightSavingTime
 	}
 }

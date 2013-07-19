@@ -1,10 +1,6 @@
 ﻿using ATFramework.Framework;
 using ATFramework.WebElements;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using System.Threading;
-using ATFramework.Framework.Extensions;
-using System;
 using ATFramework.WebElements.Utils;
 
 namespace TimeAndDateAutomation.WebPages

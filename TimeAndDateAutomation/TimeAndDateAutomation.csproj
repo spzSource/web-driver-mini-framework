@@ -65,8 +65,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AutoTests\MenuTest.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebPages\Blocks\MenuBlock.cs" />
     <Compile Include="WebPages\Blocks\Menus.cs" />
     <Compile Include="WebPages\HomePage.cs" />
     <Compile Include="WebPages\TestablePage.cs" />
