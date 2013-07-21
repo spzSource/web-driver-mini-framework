@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using ATFramework.Framework;
-using ATFramework.Framework.Extensions;
 
 namespace ATFramework.WebElements
 {
@@ -8,7 +7,7 @@ namespace ATFramework.WebElements
 	{
 		public Block(By by)
 		{
-			this.byLocator = by;
+			this.ByLocator = by;
 		}
 
 		public string Text

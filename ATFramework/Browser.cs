@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 

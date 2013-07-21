@@ -1,5 +1,4 @@
-﻿using OpenQA.Selenium;
-using RealtAutomation.Framework;
+﻿using RealtAutomation.Framework;
 using RealtAutomation.WebElements;
 using RealtAutomation.Framework.Exceptions;
 using RealtAutomation.WebElements.Utils;

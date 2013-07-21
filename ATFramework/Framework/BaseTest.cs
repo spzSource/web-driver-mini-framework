@@ -34,7 +34,9 @@ namespace ATFramework.Framework
 
 		public IEnumerable<object[]> GetTestData()
 		{
-			XDocument document = XDocument.Load("test_data.xml");
+			string dataPath = ConfigurationManager.AppSettings["test_data_path"];
+
+			XDocument document = XDocument.Load(dataPath);
 			var section = from sct in document.Descendants("test_data")
 						  where sct.Attribute("name").Value.Equals(GetType().Name)
 						  select sct;

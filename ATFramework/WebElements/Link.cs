@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using ATFramework.Framework;
-using ATFramework.Framework.Extensions;
 using OpenQA.Selenium.Interactions;
 
 namespace ATFramework.WebElements
@@ -9,7 +8,7 @@ namespace ATFramework.WebElements
 	{
 		public Link(By by)
 		{
-			this.byLocator = by;
+			this.ByLocator = by;
 		}
 
 		public override void Click()

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace ATFramework.Framework.Common
@@ -23,9 +22,6 @@ namespace ATFramework.Framework.Common
 
 		public static IEnumerable<string> Split(string source, char separator = '>')
 		{
-			//char menuSeparator = ConfigurationManager.AppSettings["menu_separator"]
-			//	.ToCharArray().First();
-
 			string[] menuItems = source.Split(separator)
 				.Select(e => e.Trim())
 				.ToArray();

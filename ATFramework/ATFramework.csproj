@@ -59,6 +59,7 @@
     <Compile Include="Framework\BaseTest.cs" />
     <Compile Include="Framework\Common\CommonFunctions.cs" />
     <Compile Include="Framework\Exceptions\PageNotFoundException.cs" />
+    <Compile Include="Framework\Extensions\EnumExtension.cs" />
     <Compile Include="Framework\Extensions\WebDriverExtensions.cs" />
     <Compile Include="Framework\NameAttribute.cs" />
     <Compile Include="Logger.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="WebElements\Input.cs" />
     <Compile Include="WebElements\Label.cs" />
     <Compile Include="WebElements\Link.cs" />
+    <Compile Include="WebElements\Utils\BlockAttribute.cs" />
     <Compile Include="WebElements\Utils\ByFactory.cs" />
     <Compile Include="WebElements\Utils\BindAttribute.cs" />
     <Compile Include="WebElements\Utils\How.cs" />

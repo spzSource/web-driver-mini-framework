@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using ATFramework.Framework.Common;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using ATFramework.WebElements;
 using OpenQA.Selenium.Interactions;

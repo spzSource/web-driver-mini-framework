@@ -10,7 +10,8 @@ namespace ATFramework.Framework.Extensions
 		public static IWebElement SafeFindElement(this IWebDriver driver, By by, int seconds = 0)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
-			wait.PollingInterval = TimeSpan.FromSeconds(1.0d);
+			wait.PollingInterval = TimeSpan.FromSeconds(1);
+			wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 			return wait.Until<IWebElement>(drv => drv.FindElement(by));
 		}
 

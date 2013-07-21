@@ -11,13 +11,9 @@ namespace RealtAutomation.Framework
 		public abstract bool IsDisplayed();
 		public abstract void Click();
 
-		public virtual bool isPresent()
+		public virtual bool IsPresent()
 		{
-			bool result = false;
-			if (Browser.Driver.FindElements(byLocator).Count > 0)
-			{
-				result = true;
-			}
+			bool result = Browser.Driver.FindElements(byLocator).Count > 0;
 			return result;
 		}
 	}

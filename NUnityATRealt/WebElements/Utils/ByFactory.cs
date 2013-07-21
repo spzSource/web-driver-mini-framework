@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Globalization;
 using System.Xml.Linq;
 using System.Linq;
-using System.Collections.Generic;
 using OpenQA.Selenium;
 
 namespace RealtAutomation.WebElements.Utils

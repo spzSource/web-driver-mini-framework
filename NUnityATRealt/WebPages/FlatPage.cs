@@ -1,6 +1,4 @@
 ﻿using NUnitATRealt.WebElements.Utils;
-using OpenQA.Selenium;
-using RealtAutomation.Annotations;
 using RealtAutomation.Framework;
 using RealtAutomation.Framework.Exceptions;
 using RealtAutomation.WebElements;

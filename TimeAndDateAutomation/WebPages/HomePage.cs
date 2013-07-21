@@ -9,6 +9,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System;
 using TimeAndDateAutomation.Annotations;
+using ATFramework.Framework.Extensions;
+using TimeAndDateAutomation.WebPages.Blocks;
 
 namespace TimeAndDateAutomation.WebPages
 {
@@ -17,16 +19,20 @@ namespace TimeAndDateAutomation.WebPages
 		[Bind(How = How.CssSelector, Name = "AppsAndApiLink"), UsedImplicitly] 
 		private Link linkAppsAndApi;
 
+		private Block1 block;
+
+		private const string MenuLocator = ".//ul[@id='ht']/li/a[contains(., '{0}')]";
+		private const string DropMenuLocator = ".//*[@id='ho']/li/a[contains(.,'{0}')]";
+
 		public HomePage()
 		{
 			PageFactory.InitElements(this);
-			Assert.True(linkAppsAndApi.isPresent());
+			Assert.True(linkAppsAndApi.IsPresent());
 		}
 
-		public bool CheckPage(string chainMenu, string navigationLabel)
+		public bool CheckPage(Enum chainMenu, string navigationLabel)
 		{
-	
-			TestablePage page = ClickToItem(chainMenu);
+			TestablePage page = ClickToItem(chainMenu.Name());
 			return page.CheckNavigationChain(navigationLabel);
 		}
 
@@ -34,17 +40,22 @@ namespace TimeAndDateAutomation.WebPages
 		{
 			List<string> menuItems = CommonFunctions.Split(chainMenu).ToList();
 
-			string itemLocator = string.Format(".//ul[@id='ht']/li/a[contains(., '{0}')]", menuItems.First());
-			Link link = new Link(By.XPath(itemLocator));
-		
-			link.WaitPresent(TimeSpan.FromSeconds(10));
-			
-			Actions action = new Actions(Driver);
-			action.MoveToElement(link.WebElement).Perform();
+			if (menuItems.Count != 2)
+				throw  new ArgumentException("Argument 'chainMenu' must contain two elements.");
 
-			string targetLinkLocator = string.Format(".//*[@id='ho']/li/a[contains(.,'{0}')]", menuItems.Last());
-			Link targetLink = new Link(By.XPath(targetLinkLocator));
-			targetLink.Click();
+			string mainMenuItem = menuItems.First();
+			string dropDownMenuItem = menuItems.Last();
+
+			string mainItemLocator = string.Format(MenuLocator, mainMenuItem);
+			string dropDownItemLocator = string.Format(DropMenuLocator, dropDownMenuItem);
+			
+			Link mainLink = new Link(By.XPath(mainItemLocator));
+			Link dropDownLink = new Link(By.XPath(dropDownItemLocator));
+
+			Actions action = new Actions(Driver);
+			action.MoveToElement(mainLink.WebElement).Perform();
+
+			dropDownLink.Click();
 
 			return new TestablePage();
 		}

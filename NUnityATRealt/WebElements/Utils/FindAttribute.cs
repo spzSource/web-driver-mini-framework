@@ -1,5 +1,4 @@
 ﻿using System;
-using OpenQA.Selenium;
 using RealtAutomation.Annotations;
 
 namespace RealtAutomation.WebElements.Utils

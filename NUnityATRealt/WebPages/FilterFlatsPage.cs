@@ -16,7 +16,7 @@ namespace RealtAutomation.WebPages
 		public FilterFlatsPage()
 		{
 			PageFactory.InitElements(this);
-			Assert.True(chooseFlatsLink.isPresent());
+			Assert.True(chooseFlatsLink.IsPresent());
 		}
 
 		public FlatPage FlatsLinkClick()

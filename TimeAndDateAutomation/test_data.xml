@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <tests>
 	<test_data name="MenuTest">
-		<data_item chain_menu="" nav_str="1000"/>
-		<data_item chain_menu="Брест" nav_str="200"/>
-		<data_item chain_menu="Гомель" nav_str="100"/>
+		<data_item chain_menu="Home > Newsletter" nav_str="Home > Site information > Newsletter"/>
+		<data_item chain_menu="Home > Site Map" nav_str="Home > Site information > Sitemap"/>
+		<data_item chain_menu="World Clock > Main World Clock" nav_str="Home > Time Zones > World Clock"/>
+		<data_item chain_menu="World Clock > Extended World Clock" nav_str="Home > Time Zones > World Clock > Extended Version"/>
+		<data_item chain_menu="World Clock > Personal World Clock" nav_str="Home > Time Zones > World Clock > Personal World Clock"/>
+		<data_item chain_menu="World Clock > Event Time Announcer" nav_str="Home > Time Zones > World Clock > Event Time Announcer"/>
+		<data_item chain_menu="Time Zones > Time Zone Abbreviations" nav_str="Home > Time Zones > Time Zone abbreviations"/>
 	</test_data>
 </tests>
