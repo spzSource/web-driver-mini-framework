@@ -13,34 +13,35 @@ namespace ATFramework.WebElements.Utils
 		public static void InitElements(object page)
 		{
 			Type type = page.GetType();
-			List<MemberInfo> membersBasicList = new List<MemberInfo>();
+			//List<MemberInfo> membersBasicList = new List<MemberInfo>();
+			List<MemberInfo> members = new List<MemberInfo>();
 
 			const BindingFlags publicBindingOptions = BindingFlags.Instance | BindingFlags.Public;
-			membersBasicList.AddRange(type.GetFields(publicBindingOptions));
-			membersBasicList.AddRange(type.GetProperties(publicBindingOptions));
+			members.AddRange(type.GetFields(publicBindingOptions));
+			members.AddRange(type.GetProperties(publicBindingOptions));
 
 			while (type != null)
 			{
 				const BindingFlags nonPublicBindingOptions = BindingFlags.Instance | BindingFlags.NonPublic;
-				membersBasicList.AddRange(type.GetFields(nonPublicBindingOptions));
-				membersBasicList.AddRange(type.GetProperties(nonPublicBindingOptions));
+				members.AddRange(type.GetFields(nonPublicBindingOptions));
+				members.AddRange(type.GetProperties(nonPublicBindingOptions));
 				type = type.BaseType;
 			}
 
-			List<MemberInfo> members = new List<MemberInfo>();
+			
 
-			const BindingFlags publicAndNonPublicBindingOptions = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.NonPublic;
+			//const BindingFlags publicAndNonPublicBindingOptions = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.NonPublic;
 
-			members.AddRange(membersBasicList);
-			foreach (MemberInfo memberInfo in membersBasicList)
-			{
-				BlockAttribute blockAttribute = memberInfo.GetType().GetCustomAttribute(typeof (BlockAttribute), true) as BlockAttribute;
-				if (blockAttribute != null)
-				{
-					members.AddRange(memberInfo.GetType().GetFields(publicAndNonPublicBindingOptions));
-					members.AddRange(memberInfo.GetType().GetProperties(publicAndNonPublicBindingOptions));	
-				}
-			}
+			//members.AddRange(membersBasicList);
+			//foreach (MemberInfo memberInfo in membersBasicList)
+			//{
+			//	BlockAttribute blockAttribute = memberInfo.GetType().GetCustomAttribute(typeof (BlockAttribute), true) as BlockAttribute;
+			//	if (blockAttribute != null)
+			//	{
+			//		members.AddRange(memberInfo.GetType().GetFields(publicAndNonPublicBindingOptions));
+			//		members.AddRange(memberInfo.GetType().GetProperties(publicAndNonPublicBindingOptions));	
+			//	}
+			//}
 
 			foreach (var member in members)
 			{

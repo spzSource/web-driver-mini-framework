@@ -68,7 +68,6 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\EnumFunctions.cs" />
-    <Compile Include="WebPages\Blocks\Block1.cs" />
     <Compile Include="WebPages\Blocks\Menus.cs" />
     <Compile Include="WebPages\HomePage.cs" />
     <Compile Include="WebPages\TestablePage.cs" />

@@ -19,8 +19,6 @@ namespace TimeAndDateAutomation.WebPages
 		[Bind(How = How.CssSelector, Name = "AppsAndApiLink"), UsedImplicitly] 
 		private Link linkAppsAndApi;
 
-		private Block1 block;
-
 		private const string MenuLocator = ".//ul[@id='ht']/li/a[contains(., '{0}')]";
 		private const string DropMenuLocator = ".//*[@id='ho']/li/a[contains(.,'{0}')]";
 
@@ -30,10 +28,10 @@ namespace TimeAndDateAutomation.WebPages
 			Assert.True(linkAppsAndApi.IsPresent());
 		}
 
-		public bool CheckPage(Enum chainMenu, string navigationLabel)
+		public TestablePage GoToPage(Enum chainMenu)
 		{
 			TestablePage page = ClickToItem(chainMenu.Name());
-			return page.CheckNavigationChain(navigationLabel);
+			return page;
 		}
 
 		public TestablePage ClickToItem(string chainMenu)

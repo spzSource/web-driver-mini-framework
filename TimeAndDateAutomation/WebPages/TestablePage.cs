@@ -11,6 +11,11 @@ namespace TimeAndDateAutomation.WebPages
 		[Bind(How = How.Id, Name = "NavigationChain"), UsedImplicitly]
 		private Label navigationChain;
 
+		public string NavString
+		{
+			get { return navigationChain.Text; }
+		}
+
 		public TestablePage()
 		{
 			PageFactory.InitElements(this);
